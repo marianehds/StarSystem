@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
+    "@mdx-js/react": "^3.0.1",
+    "@storybook/addon-docs": "^8.2.8",
     "@storybook/addon-essentials": "^8.2.8",
     "@storybook/addon-interactions": "^8.2.8",
     "@storybook/addon-links": "^8.2.8",
@@ -32,6 +34,7 @@
     "eslint-config-next": "14.2.5",
     "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8",
+    "prettier": "^3.3.3",
     "storybook": "^8.2.8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
