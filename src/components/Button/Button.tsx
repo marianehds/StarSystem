@@ -1,16 +1,7 @@
-export type ButtonProps = {
-    children: React.ReactNode;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+import { ButtonProps } from "./Button.type";
 
 const Button = ({ children, className }: ButtonProps) => {
-    return <button
-        className={`
-            minhas-estilizações
-            ${className}
-        `}
-    >
-        { children }
-    </button>
-}
+  return <button className={`classes ${className} `}>{children}</button>;
+};
 
-export default Button
+export default Button;
