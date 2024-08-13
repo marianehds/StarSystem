@@ -1,0 +1,13 @@
+[data-component="button-starsystem"] {
+  padding: 5px;
+
+  &.btn-twilight {
+    background-color: #240097;
+    color: white;
+  }
+
+  &.btn-night {
+    background-color: #001f3f;
+    color: white;
+  }
+}
