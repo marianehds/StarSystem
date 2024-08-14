@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { ButtonProps } from "./Button.type";
-import Button from "./Button";
+import Button from ".";
 
 const meta: Meta<ButtonProps> = {
   title: "Molecules/Button",
@@ -15,8 +15,16 @@ const meta: Meta<ButtonProps> = {
 
 export default meta;
 
-export const Primary: StoryObj<ButtonProps> = {
+export const Night: StoryObj<ButtonProps> = {
   args: {
     children: "Botão",
+    variant: "night",
+  },
+};
+
+export const Twilight: StoryObj<ButtonProps> = {
+  args: {
+    children: "Botão",
+    variant: "twilight",
   },
 };
