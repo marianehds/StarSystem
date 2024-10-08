@@ -15,16 +15,16 @@ const meta: Meta<ButtonProps> = {
 
 export default meta;
 
-export const Night: StoryObj<ButtonProps> = {
+export const Primary: StoryObj<ButtonProps> = {
   args: {
     children: "Botão",
-    variant: "night",
+    variant: "primary",
   },
 };
 
-export const Twilight: StoryObj<ButtonProps> = {
+export const Secondary: StoryObj<ButtonProps> = {
   args: {
     children: "Botão",
-    variant: "twilight",
+    variant: "secondary",
   },
 };

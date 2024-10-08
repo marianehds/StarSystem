@@ -1,16 +1,32 @@
+@import "../../styles/tokens/_colors.scss";
+
 [data-component="button-starsystem"] {
   padding: 7px;
   border-radius: 6px;
 
-  &.variant-twilight {
-    background-color: #240097;
-    color: white;
+  &.variant-primary {
+    background-color: $blue-deep;
+    color: $stellar-light;
+  
+    &:hover {
+      background-color: $blue-night;
+    }
   }
-
-  &.variant-night {
-    background-color: #001f3f;
-    color: white;
+  
+  &.variant-secondary {
+    background-color: $purple-galaxy;
+    color: $stellar-light;
+  
+    &:hover {
+      background-color: $purple-nebula;
+    }
   }
+  
+  &.variant-alert {
+    background: $sun-gradient;
+    color: $stellar-light;
+  }
+  
 
   &.size-small {
     font-size: 12px;

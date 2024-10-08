@@ -1,4 +1,4 @@
-export type TVariant = "twilight" | "night";
+export type TVariant = "primary" | "secondary" | "alert" | "disabled";
 export type TSize = "small" | "medium" | "large";
 
 export type ButtonProps = {
