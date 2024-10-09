@@ -39,6 +39,6 @@ export const Alert: StoryObj<ButtonProps> = {
 export const Disabled: StoryObj<ButtonProps> = {
   args: {
     children: "Botão",
-    variant: "disabled",
+    disabled: true,
   },
 };

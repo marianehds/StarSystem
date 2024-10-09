@@ -16,6 +16,8 @@
     background: $stellar-dark;
     color: $stellar-light;
     border-color: $stellar-light;
+    cursor: not-allowed;
+
   }
   &--primary {
     background-color: $blue-deep;
@@ -30,12 +32,12 @@
   }
 
   &--secondary {
-    background-color: $purple-galaxy;
+    background-color: $purple-nebula;
     color: $stellar-light;
     transition: background-color 0.5s ease-in-out;
 
     &:focus {
-      background-color: $purple-nebula;
+      background-color: $purple-galaxy;
       transition: background-color 0.5s ease-in-out;
     }
   }

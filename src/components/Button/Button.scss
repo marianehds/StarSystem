@@ -6,7 +6,6 @@
   &:hover {
     cursor: pointer;
   }
-  
   &.button {
     &--primary {
       background-color: $blue-deep;
@@ -20,11 +19,11 @@
     }
 
     &--secondary {
-      background-color: $purple-galaxy;
+      background-color: $purple-nebula;
       color: $stellar-light;
       transition: background-color 1s ease-in-out;
       &:hover {
-        background-color: $purple-nebula;
+        background-color: $purple-galaxy;
         transition: background-color 1s ease-in-out;
       }
     }
@@ -33,34 +32,34 @@
       background-color: $sun-fire;
       color: $stellar-light;
     }
-
-    &--disabled {
-      background: $stellar-dark;
-      color: $stellar-light;
-      text-decoration: line-through transparent;
-      transition: text-decoration 300ms ease;
-      &:hover {
-        text-decoration: line-through;
-        transition: text-decoration 1s ease-in-out;
-      }
+  }
+  &.size {
+    &--small {
+      font-size: 12px;
+      padding: 7px 17px;
+      border-radius: 11px;
+    }
+    &--medium {
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 11px;
+    }
+    &--large {
+      font-size: 16px;
+      padding: 13px 23px;
+      border-radius: 11px;
     }
   }
-&.size {
-
-  &--small {
-    font-size: 12px;
-    padding: 7px 17px;
-    border-radius: 11px;
+  &:disabled {
+    background: $stellar-dark;
+    color: $stellar-light;
+    text-decoration: line-through transparent;
+    transition: text-decoration 300ms ease;
+    &:hover {
+      background: $stellar-dark;
+      text-decoration: line-through;
+      transition: text-decoration 1s ease-in-out;
+      cursor: not-allowed;
+    }
   }
-  &--medium {
-    font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 11px;
-  }
-  &--large {
-    font-size: 16px;
-    padding: 13px 23px;
-    border-radius: 11px;
-  }
-}
 }
