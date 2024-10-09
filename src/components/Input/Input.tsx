@@ -9,6 +9,7 @@ export const Input = ({
   value,
   onChange,
   placeholder,
+  disabled,
   variant = "primary",
   size,
   className,
@@ -21,6 +22,7 @@ export const Input = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        disabled={disabled}
       />
     </div>
   );

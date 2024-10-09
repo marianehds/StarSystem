@@ -39,6 +39,6 @@ export const Alert: StoryObj<InputProps> = {
 export const Disabled: StoryObj<InputProps> = {
   args: {
     children: "Input",
-    variant: "disabled",
+    disabled: true,
   },
 };

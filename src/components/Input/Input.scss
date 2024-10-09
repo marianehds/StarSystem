@@ -12,18 +12,20 @@
   font-size: 16px;
   transition: border-color 0.3s;
   background-color: transparent;
-
+  &:disabled {
+    background: $stellar-dark;
+    color: $stellar-light;
+    border-color: $stellar-light;
+  }
   &--primary {
     background-color: $blue-deep;
     color: $stellar-light;
     transition: background-color 0.5s ease-in-out;
 
-
     &:focus {
       background-color: $blue-night;
       outline: none;
       transition: background-color 0.5s ease-in-out;
-
     }
   }
 
@@ -32,11 +34,9 @@
     color: $stellar-light;
     transition: background-color 0.5s ease-in-out;
 
-
     &:focus {
       background-color: $purple-nebula;
       transition: background-color 0.5s ease-in-out;
-
     }
   }
 
@@ -44,10 +44,5 @@
     background: $sun-gradient;
     color: $stellar-light;
     border-color: $sun-fire;
-  }
-  &--disabled {
-    background: $stellar-dark;
-    color: $stellar-light;
-    border-color: $stellar-light;
   }
 }
