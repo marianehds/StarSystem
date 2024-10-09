@@ -1,0 +1,11 @@
+[data-component="typography-starsystem"] {
+  &.weight {
+    &--regular {
+      font-weight: 300;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}

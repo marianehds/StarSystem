@@ -15,7 +15,10 @@ export const Input = ({
   className,
 }: InputProps) => {
   return (
-    <div className={`${className} size--${size}`}>
+    <div
+      data-component="input-starsystem"
+      className={`${className} size--${size}`}
+    >
       {label && <label className="input-label">{label}</label>}
       <input
         className={`input input--${variant}`}

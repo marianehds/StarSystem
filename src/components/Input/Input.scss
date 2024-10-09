@@ -1,50 +1,51 @@
 @import "../../styles/tokens/_colors.scss";
 
-.input-label {
-  margin-bottom: 8px;
-  color: $stellar-light;
-}
-
-.input {
-  padding: 10px;
-  border: 2px solid $blue-deep;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: border-color 0.3s;
-  background-color: transparent;
-  &:disabled {
-    background: $stellar-dark;
+[data-component="input-starsystem"] {
+  .input-label {
+    margin-bottom: 8px;
     color: $stellar-light;
-    border-color: $stellar-light;
-    cursor: not-allowed;
-
   }
-  &--primary {
-    background-color: $blue-deep;
-    color: $stellar-light;
-    transition: background-color 0.5s ease-in-out;
 
-    &:focus {
-      background-color: $blue-night;
-      outline: none;
-      transition: background-color 0.5s ease-in-out;
+  .input {
+    padding: 10px;
+    border: 2px solid $blue-deep;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: transparent;
+    &:disabled {
+      background: $stellar-dark;
+      color: $stellar-light;
+      border-color: $stellar-light;
+      cursor: not-allowed;
     }
-  }
-
-  &--secondary {
-    background-color: $purple-nebula;
-    color: $stellar-light;
-    transition: background-color 0.5s ease-in-out;
-
-    &:focus {
-      background-color: $purple-galaxy;
+    &--primary {
+      background-color: $blue-deep;
+      color: $stellar-light;
       transition: background-color 0.5s ease-in-out;
-    }
-  }
 
-  &--alert {
-    background: $sun-gradient;
-    color: $stellar-light;
-    border-color: $sun-fire;
+      &:focus {
+        background-color: $blue-night;
+        outline: none;
+        transition: background-color 0.5s ease-in-out;
+      }
+    }
+
+    &--secondary {
+      background-color: $purple-nebula;
+      color: $stellar-light;
+      transition: background-color 0.5s ease-in-out;
+
+      &:focus {
+        background-color: $purple-galaxy;
+        transition: background-color 0.5s ease-in-out;
+      }
+    }
+
+    &--alert {
+      background: $sun-gradient;
+      color: $stellar-light;
+      border-color: $sun-fire;
+    }
   }
 }
