@@ -11,7 +11,7 @@ export const Button = ({
   return (
     <button
       data-component="button-starsystem"
-      className={`${className} variant-${variant} size-${size}`}
+      className={`${className} button--${variant} size--${size}`}
     >
       {children}
     </button>
