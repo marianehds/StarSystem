@@ -7,26 +7,39 @@
   &.variant-primary {
     background-color: $blue-deep;
     color: $stellar-light;
-  
+    transition: background-color 0.5s ease-in-out;
+
     &:hover {
       background-color: $blue-night;
+      transition: background-color 0.5s ease-in-out;
     }
   }
-  
+
   &.variant-secondary {
     background-color: $purple-galaxy;
     color: $stellar-light;
-  
+    transition: background-color 1s ease-in-out;
     &:hover {
       background-color: $purple-nebula;
+      transition: background-color 1s ease-in-out;
     }
   }
-  
+
   &.variant-alert {
-    background: $sun-gradient;
+    background-color: $sun-fire;
     color: $stellar-light;
   }
-  
+
+  &.variant-disabled {
+    background: $stellar-dark;
+    color: $stellar-light;
+    text-decoration: line-through transparent;
+    transition: text-decoration 300ms ease;
+    &:hover {
+      text-decoration: line-through;
+      transition: text-decoration 1s ease-in-out;
+    }
+  }
 
   &.size-small {
     font-size: 12px;
@@ -42,5 +55,8 @@
     font-size: 16px;
     padding: 13px 23px;
     border-radius: 11px;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }

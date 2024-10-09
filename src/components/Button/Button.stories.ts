@@ -28,3 +28,17 @@ export const Secondary: StoryObj<ButtonProps> = {
     variant: "secondary",
   },
 };
+
+export const Alert: StoryObj<ButtonProps> = {
+  args: {
+    children: "Botão",
+    variant: "alert",
+  },
+};
+
+export const Disabled: StoryObj<ButtonProps> = {
+  args: {
+    children: "Botão",
+    variant: "disabled",
+  },
+};

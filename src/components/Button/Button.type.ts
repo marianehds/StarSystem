@@ -1,5 +1,4 @@
-export type TVariant = "primary" | "secondary" | "alert" | "disabled";
-export type TSize = "small" | "medium" | "large";
+import { TSize, TVariant } from "@/src/shared/types";
 
 export type ButtonProps = {
   children: React.ReactNode;
