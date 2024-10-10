@@ -1,12 +1,20 @@
 import React from "react";
 
-import { CardProps } from "./Card.type";
 import Typography from "../Typography";
+
+import { CardProps } from "./Card.type";
+import { defaulVariant } from ".";
 import "./Card.scss";
 
-export const Card = ({ media, Title, SubTitle, children }: CardProps) => {
+export const Card = ({
+  media,
+  Title,
+  SubTitle,
+  children,
+  variant = defaulVariant,
+}: CardProps) => {
   return (
-    <div data-component="card-starsystem">
+    <div data-component="card-starsystem" className={`card--${variant}`}>
       {media && <img alt="aaa" src={media} />}
       {Title && (
         <Typography variant="h3" className="title">
