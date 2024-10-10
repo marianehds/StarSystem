@@ -1,4 +1,3 @@
-// src/components/Input/Input.tsx
 
 import React from "react";
 import "./Input.scss";
