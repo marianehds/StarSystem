@@ -3,7 +3,7 @@ import { TypographyProps } from "./Typography.type";
 import Typography from ".";
 
 const meta: Meta<TypographyProps> = {
-  title: "Molecules/Typography",
+  title: "Atoms/Typography",
   tags: ["autodocs"],
   component: Typography,
   argTypes: {
@@ -25,7 +25,7 @@ export const P: StoryObj<TypographyProps> = {
   args: {
     children:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    variant: "p",
+    variant: "h6",
   },
 };
 

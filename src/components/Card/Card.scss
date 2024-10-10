@@ -1,0 +1,20 @@
+@import "../../styles/tokens/_colors.scss";
+
+[data-component="card-starsystem"] {
+  box-shadow: 0em 0em 20px 0px #938c66;
+  border-radius: 14px;
+  width: 230px;
+  padding: 10px 15px;
+  img {
+    border-radius: 14px;
+    margin: -15px;
+    padding-bottom: 25px;
+    width: -webkit-fill-available;
+  }
+  .title {
+    border-bottom: 1px solid #0000007a;
+  }
+  .children {
+    padding-top: 10px;
+  }
+}
