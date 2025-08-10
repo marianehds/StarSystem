@@ -19,6 +19,9 @@ git clone https://github.com/marianehds/StarSystem.git
 
 - cd StarSystem
 
+caso não tenha o yarn instalado, instale-o com o comando abaixo:
+- npm install -g yarn
+
 - yarn install
 
 ### Running Storybook
