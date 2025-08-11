@@ -4,4 +4,5 @@ export type ButtonProps = {
   children: React.ReactNode;
   variant: TVariantWithError;
   size: TSize;
+  stars?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;

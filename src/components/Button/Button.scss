@@ -1,27 +1,67 @@
 @import "../../styles/tokens/_colors.scss";
 
 [data-component="button-starsystem"] {
+  position: relative;
   padding: 7px;
-  border-radius: 6px;
+  overflow: hidden;
+  isolation: isolate;
   &:hover {
     cursor: pointer;
   }
   &.button {
+    
+      // Estrelas decorativas e animação de "burst" no clique
+      .stars {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .star {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: $stellar-light;
+        border-radius: 50%;
+        opacity: 0;
+        transform: translate(0, 0) scale(0.5);
+      }
+
+      // posições iniciais pseudo-aleatórias
+      .star-1 { left: 18%; top: 35%; }
+      .star-2 { left: 78%; top: 42%; }
+      .star-3 { left: 52%; top: 18%; }
+      .star-4 { left: 32%; top: 68%; }
+      .star-5 { left: 64%; top: 72%; }
+      .star-6 { left: 8%;  top: 58%; }
+
+      // Quando clicado, ativa o burst
+      &.is-bursting {
+        .star-1 { animation: star-burst 700ms ease-out forwards; }
+        .star-2 { animation: star-burst 700ms 40ms ease-out forwards; }
+        .star-3 { animation: star-burst 700ms 80ms ease-out forwards; }
+        .star-4 { animation: star-burst 700ms 120ms ease-out forwards; }
+        .star-5 { animation: star-burst 700ms 160ms ease-out forwards; }
+        .star-6 { animation: star-burst 700ms 200ms ease-out forwards; }
+      }
     &--primary {
       background-color: $blue-deep;
       color: $stellar-light;
       transition: background-color 0.5s ease-in-out;
-
+      border: 2px solid $twilight;
+      
       &:hover {
         background-color: $blue-night;
         transition: background-color 0.5s ease-in-out;
       }
     }
-
+    
     &--secondary {
       background-color: $purple-nebula;
       color: $stellar-light;
       transition: background-color 1s ease-in-out;
+      border: 2px solid $purple-galaxy;
       &:hover {
         background-color: $purple-galaxy;
         transition: background-color 1s ease-in-out;
@@ -36,23 +76,31 @@
     &--alert {
       background: $sun-gradient-light;
       color: $stellar-light;
+      border: 2px solid $sun-fire;
     }
+  }
+  .button__content {
+    position: relative;
+    z-index: 1;
   }
   &.size {
     &--small {
       font-size: 12px;
+      font-weight: bold;
       padding: 7px 17px;
-      border-radius: 11px;
+      border-radius: 30px;
     }
     &--medium {
       font-size: 14px;
+      font-weight: bold;
       padding: 10px 20px;
-      border-radius: 11px;
+      border-radius: 30px;
     }
     &--large {
       font-size: 16px;
+      font-weight: bold;
       padding: 13px 23px;
-      border-radius: 11px;
+      border-radius: 30px;
     }
   }
   &:disabled {
@@ -60,6 +108,8 @@
     color: $stellar-light;
     text-decoration: line-through transparent;
     transition: text-decoration 300ms ease;
+    border: 2px solid $stellar-dark;
+
     &:hover {
       background: $stellar-dark;
       text-decoration: line-through;
@@ -68,3 +118,29 @@
     }
   }
 }
+
+@keyframes star-burst {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.5);
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    // "Explode" em direções variadas
+    transform: translate(var(--tx, 0), var(--ty, 0)) scale(0.9);
+  }
+}
+
+// Deslocamentos variados usando nth-child para gerar vetores distintos
+[data-component="button-starsystem"].is-bursting .star-1 { --tx: -16px; --ty: -18px; }
+[data-component="button-starsystem"].is-bursting .star-2 { --tx:  20px; --ty: -14px; }
+[data-component="button-starsystem"].is-bursting .star-3 { --tx:   8px; --ty: -24px; }
+[data-component="button-starsystem"].is-bursting .star-4 { --tx: -12px; --ty:  18px; }
+[data-component="button-starsystem"].is-bursting .star-5 { --tx:  22px; --ty:  16px; }
+[data-component="button-starsystem"].is-bursting .star-6 { --tx:  -6px; --ty:  22px; }

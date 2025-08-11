@@ -6,10 +6,17 @@ const meta: Meta<ButtonProps> = {
   title: "Molecules/Button",
   tags: ["autodocs"],
   component: Button,
+  args: {
+    stars: true,
+  },
   argTypes: {
     children: {
       control: "text",
       description: "Texto do botão",
+    },
+    stars: {
+      control: "boolean",
+      description: "Exibe animação de estrelas ao clicar",
     },
     variant: {
       control: "select",
@@ -31,35 +38,35 @@ export default meta;
 
 export const Primary: StoryObj<ButtonProps> = {
   args: {
-    children: "Botão",
+    children: "Button",
     variant: "primary",
   },
 };
 
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
-    children: "Botão",
+    children: "Button",
     variant: "secondary",
   },
 };
 
 export const Error: StoryObj<ButtonProps> = {
   args: {
-    children: "Botão",
+    children: "Button",
     variant: "error",
   },
 };
 
 export const Alert: StoryObj<ButtonProps> = {
   args: {
-    children: "Botão",
+    children: "Button",
     variant: "alert",
   },
 };
 
 export const Disabled: StoryObj<ButtonProps> = {
   args: {
-    children: "Botão",
+    children: "Button",
     disabled: true,
   },
 };
