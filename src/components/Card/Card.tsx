@@ -17,13 +17,13 @@ export const Card = ({
     <div data-component="card-starsystem" className={`card--${variant}`}>
       {media && <img alt="aaa" src={media} />}
       {Title && (
-        <Typography variant="h3" className="title">
+        <Typography size="h3" className="title">
           {Title}
         </Typography>
       )}
 
       {SubTitle && (
-        <Typography variant="h5" fontWeight="regular">
+        <Typography size="h5" fontWeight="regular">
           {SubTitle}
         </Typography>
       )}
