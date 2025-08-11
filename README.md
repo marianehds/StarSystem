@@ -27,3 +27,11 @@ caso não tenha o yarn instalado, instale-o com o comando abaixo:
 ### Running Storybook
 
 - yarn storybook
+
+### Gerando versão
+- yarn build-storybook
+- yarn deploy-storybook
+
+## Visualizando o Storybook 
+Abra no navegador o link e veja o projeto!
+https://marianehds.github.io/StarSystem/?path=/docs/introdução--docs
