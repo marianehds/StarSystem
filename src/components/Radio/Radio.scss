@@ -1,3 +1,53 @@
+@import "../../styles/tokens/_colors.scss";
+
 [data-component="radio-starsystem"] {
- 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  
+  .radio-input {
+    cursor: pointer;
+    margin: 0;
+
+    &.radio--primary {
+      accent-color: $blue-deep;
+    }
+
+    &.radio--secondary {
+      accent-color: $purple-nebula;
+    }
+
+    &.radio--alert {
+      accent-color: $sun-fire;
+    }
+  }
+  
+  .radio-label {
+    cursor: pointer;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  
+  &.size--small {
+    .radio-input { width: 14px; height: 14px; }
+    .radio-label { font-size: 12px; }
+  }
+  
+  &.size--medium {
+    .radio-input { width: 16px; height: 16px; }
+    .radio-label { font-size: 14px; }
+  }
+  
+  &.size--large {
+    .radio-input { width: 18px; height: 18px; }
+    .radio-label { font-size: 16px; }
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    .radio-input, .radio-label { cursor: not-allowed; }
+  }
 }

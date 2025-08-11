@@ -28,8 +28,13 @@
       }
     }
 
-    &--alert {
+    &--error {
       background-color: $sun-fire;
+      color: $stellar-light;
+    }
+
+    &--alert {
+      background: $sun-gradient-light;
       color: $stellar-light;
     }
   }

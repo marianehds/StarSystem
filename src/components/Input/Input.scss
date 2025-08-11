@@ -1,11 +1,6 @@
 @import "../../styles/tokens/_colors.scss";
 
 [data-component="input-starsystem"] {
-  .input-label {
-    margin-bottom: 8px;
-    color: $stellar-light;
-  }
-
   .input {
     padding: 10px;
     border: 2px solid $blue-deep;
@@ -43,7 +38,7 @@
     }
 
     &--alert {
-      background: $sun-gradient;
+      background: $sun-gradient-light;
       color: $stellar-light;
       border-color: $sun-fire;
     }

@@ -7,34 +7,47 @@ const meta: Meta<RadioProps> = {
   tags: ["autodocs"],
   component: Radio,
   argTypes: {
-    children: {
-      control: "text",
+    options: {
+      description: "Opções do Radio",
+    },
+    size: {
+      control: "select",
+      options: ["small", "medium", "large"],
+      description: "Tamanho do radio",
+    },
+    disabled: {
+      control: "boolean",
+      description: "Se o radio está desabilitado",
+    },
+    onChange: {
+      action: "onChange",
+      description: "Função de mudança",
     },
   },
 };
 
-export const Alert: StoryObj<RadioProps> = {
-  args: {
-    children:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    variant: "alert",
-  },
-};
-
-export const Primary: StoryObj<RadioProps> = {
-  args: {
-    children:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    variant: "primary",
-  },
-};
-
-export const Secondary: StoryObj<RadioProps> = {
-  args: {
-    children:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    variant: "secondary",
-  },
-};
-
 export default meta;
+
+
+export const Default: StoryObj<RadioProps> = {
+  args: {
+    size: "medium",
+    options: [
+      { label: "Plano Básico", value: "basic" },
+      { label: "Plano Padrão", value: "standard" },
+      { label: "Plano Premium", value: "premium" },
+    ],
+  },
+};
+
+export const Disabled: StoryObj<RadioProps> = {
+  args: {
+    size: "medium",
+    disabled: true,
+    options: [
+      { label: "Plano Básico", value: "basic" },
+      { label: "Plano Padrão", value: "standard" },
+      { label: "Plano Premium", value: "premium" },
+    ],
+  },
+};

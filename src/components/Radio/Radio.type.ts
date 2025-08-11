@@ -1,11 +1,18 @@
 import { TSize, TVariant } from "@/src/shared/types";
 
-export type RadioProps = {
-  variant?: TVariant;
-  className?: string;
-  label?: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  size?: TSize;
+export type RadioOption = {
+  label: React.ReactNode;
+  value: string;
+  disabled?: boolean;
+};
 
-  children: React.ReactNode;
-}
+export type RadioProps = {
+  label?: string;
+  variant?: TVariant;
+  size?: TSize;
+  name?: string;
+  options?: RadioOption[];
+  selectedValue?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  children?: React.ReactNode;
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'variant' | 'onChange' | 'children'>;
