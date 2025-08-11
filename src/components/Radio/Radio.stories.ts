@@ -11,7 +11,7 @@ const meta: Meta<RadioProps> = {
       description: "Opções do Radio",
     },
     size: {
-      control: "select",
+      control: "radio",
       options: ["small", "medium", "large"],
       description: "Tamanho do radio",
     },

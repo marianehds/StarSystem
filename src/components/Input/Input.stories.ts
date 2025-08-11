@@ -12,7 +12,7 @@ const meta: Meta<InputProps> = {
       description: "Texto do input",
     },
     variant: {
-      control: "select",
+      control: "radio",
       options: ["primary", "secondary", "alert"],
       description: "Variante do input",
     },

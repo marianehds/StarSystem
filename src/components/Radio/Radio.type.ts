@@ -7,7 +7,6 @@ export type RadioOption = {
 };
 
 export type RadioProps = {
-  label?: string;
   variant?: TVariant;
   size?: TSize;
   name?: string;

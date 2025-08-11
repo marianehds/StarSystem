@@ -3,13 +3,13 @@ import { TypographyProps } from "./Typography.type";
 import "./Typography.scss";
 
 export const Typography = ({
-  variant = "h1",
+  size = "h1",
   className = "",
   color,
   children,
   fontWeight,
 }: TypographyProps) => {
-  const Component = variant;
+  const Component = size;
 
   return (
     <Component

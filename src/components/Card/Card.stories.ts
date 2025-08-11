@@ -9,7 +9,25 @@ const meta: Meta<CardProps> = {
   argTypes: {
     children: {
       control: "text",
+      description: "Texto do corpo do Card",
     },
+    Title: {
+      control: "text",
+      description: "Texto do Título do Card",
+    },
+    SubTitle: {
+      control: "text",
+      description: "Texto do subtitulo do Card",
+    },
+    variant: {
+      control: "radio",
+      options: ["primary" , "secondary" , "alert"],
+      description: "Variação do Card",
+    },
+    media:{
+      control: "file",
+      description: "Adiciona uma imagem ao card",
+    }
   },
 };
 

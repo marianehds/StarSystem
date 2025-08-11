@@ -9,15 +9,32 @@ const meta: Meta<TypographyProps> = {
   argTypes: {
     children: {
       control: "text",
+      description: "Texto do Typography",
     },
+    size: {
+      control: "select",
+      options: ["h1", "h2", "h3", "h4", "h5", "h6", "p"],
+      description: "Tamanho do Typography",
+    },
+    color: {
+      control: "color",
+      description: "Cor do Typography",
+    },
+    fontWeight: {
+      control: "radio",
+      options: ["regular", "bold"],
+      description: "Font Weight do Typography"
+    }
   },
 };
+
+export default meta;
 
 export const H1: StoryObj<TypographyProps> = {
   args: {
     children:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    variant: "h1",
+    size: "h1",
   },
 };
 
@@ -25,8 +42,6 @@ export const P: StoryObj<TypographyProps> = {
   args: {
     children:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    variant: "h6",
+    size: "h6",
   },
 };
-
-export default meta;

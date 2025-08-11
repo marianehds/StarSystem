@@ -9,7 +9,21 @@ const meta: Meta<ButtonProps> = {
   argTypes: {
     children: {
       control: "text",
+      description: "Texto do botão",
     },
+    variant: {
+      control: "select",
+      options: ["primary", "secondary", "alert", "error"],
+      description: "Variação do botão",
+    },
+    size: {
+      control: "radio",
+      options: ["small", "medium", "large"],
+      description: "Tamanho do botão",
+    },
+    onClick: {
+      description: "OnClick do button",
+    }
   },
 };
 

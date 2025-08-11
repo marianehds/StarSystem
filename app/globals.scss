@@ -2,22 +2,14 @@
 
 :root {
   --font-family-primary: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  --font-size-base: 16px;
-  --line-height-base: 1.4;
 }
 
-/* Aplica globalmente em toda a aplicação (Next e Storybook) */
+/* Aplica globalmente somente a fonte (sem alterar tamanho/line-height) */
 *, *::before, *::after {
   font-family: var(--font-family-primary) !important;
 }
 
-html, body {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-
+/* Mantém herança da fonte nos elementos de formulário */
 button, input, textarea, select {
   font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
 }
