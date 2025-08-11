@@ -8,6 +8,15 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    // Abre a página de introdução ao carregar
+    docs: {
+      defaultName: 'Introdução',
+    },
+    options: {
+      storySort: {
+        order: ['Introdução', 'Colors', 'Atoms', 'Molecules', 'Organisms'],
+      },
+    },
   },
 };
 
