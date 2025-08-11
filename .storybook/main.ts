@@ -18,5 +18,10 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ["..\\public"],
+  // Mostrar somente o que está definido manualmente em argTypes
+  typescript: {
+    // Desabilita a inferência automática de props (docgen)
+    reactDocgen: false,
+  },
 };
 export default config;
