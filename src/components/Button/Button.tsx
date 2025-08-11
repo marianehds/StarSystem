@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ButtonProps } from "./Button.type";
-import { defaultSize, defaultStars, defaulVariant } from ".";
 import "./Button.scss";
 
 export const Button = ({
@@ -8,9 +7,9 @@ export const Button = ({
   className,
   disabled,
   onClick,
-  stars = defaultStars,
-  variant = defaulVariant,
-  size = defaultSize,
+  stars = true,
+  variant = "primary",
+  size = "medium",
 }: ButtonProps) => {
   const [isBursting, setIsBursting] = useState(false);
   const animationTimeoutRef = useRef<number | null>(null);
@@ -80,4 +79,6 @@ export const Button = ({
     </button>
   );
 };
+
+Button.displayName = "Button";
 

@@ -3,7 +3,7 @@ import React from "react";
 import Typography from "../Typography";
 
 import { CardProps } from "./Card.type";
-import { defaulVariant } from ".";
+// Evita import cíclico de defaults
 import "./Card.scss";
 
 export const Card = ({
@@ -11,7 +11,7 @@ export const Card = ({
   Title,
   SubTitle,
   children,
-  variant = defaulVariant,
+  variant = "primary",
 }: CardProps) => {
   return (
     <div data-component="card-starsystem" className={`card--${variant}`}>
@@ -32,3 +32,5 @@ export const Card = ({
     </div>
   );
 };
+
+Card.displayName = "Card";

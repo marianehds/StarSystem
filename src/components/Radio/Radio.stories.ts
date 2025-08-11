@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { RadioProps } from "./Radio.type";
-import Radio from ".";
+import { Radio } from "./Radio";
 
 const meta: Meta<RadioProps> = {
   title: "Atoms/Radio",

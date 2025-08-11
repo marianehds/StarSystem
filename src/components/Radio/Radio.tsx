@@ -70,3 +70,5 @@ export const Radio = ({
   // Modo single
   return renderRadioItem(null);
 };
+
+Radio.displayName = "Radio";

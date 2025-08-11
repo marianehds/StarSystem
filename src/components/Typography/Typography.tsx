@@ -21,3 +21,5 @@ export const Typography = ({
     </Component>
   );
 };
+
+Typography.displayName = "Typography";

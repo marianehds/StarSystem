@@ -28,3 +28,5 @@ export const Input = ({
     </div>
   );
 };
+
+Input.displayName = "Input";
